@@ -1,6 +1,8 @@
 // TODO: Buatlah data dari kedua user di sini
 // Tentukan tipe data dan struktur data yang menurut kalian tepat
 // Kalian bisa membuat variabel lain untuk dimasukkan ke dalam atribut user agar lebih mudah dibaca
+
+// Remove duplicate values
 const colorMonica = new Set();
 colorMonica.add("Yellow");
 colorMonica.add("Pink");
@@ -11,6 +13,21 @@ const colorWendy = new Set();
 colorWendy.add("Blue");
 colorWendy.add("Black");
 colorWendy.add("Grey");
+
+// Variable of favoriteColor
+const favoriteColor = [];
+
+favoriteColor.push([]);
+colorMonica.forEach(element => {
+  console.log(element); // 👉️ one, two, three, four
+  favoriteColor[0].push(element);
+});
+
+favoriteColor.push([]);
+colorWendy.forEach(element => {
+  console.log(element); // 👉️ one, two, three, four
+  favoriteColor[1].push(element);
+});
 
 const favoriteRestaurantMonica = new Set();
 favoriteRestaurantMonica.add("Bento");
@@ -41,7 +58,7 @@ const firstUser = {
   gender: "Female",
   age: 17,
   email: "monica@dingdong.com",
-  favoriteColor: colorMonica,
+  favoriteColor: favoriteColor[0],
   isHavePet: false,
   education: [
     {
@@ -72,7 +89,7 @@ const secondUser = {
   gender: "Male",
   age: 23,
   email: "wendy@dingdong.com",
-  favoriteColor: colorWendy,
+  favoriteColor: favoriteColor[1],
   isHavePet: true,
   education: [
     {
@@ -101,7 +118,7 @@ users.push(secondUser);
 // ! JANGAN MODIFIKASI LINE DI BAWAH
 function main() {
   console.log(users.length || users.size);
-  console.log(users);
+  console.log(users); 
 }
 
 main();
