@@ -18,14 +18,12 @@ colorWendy.add("Grey");
 const favoriteColor = [];
 
 favoriteColor.push([]);
-colorMonica.forEach(element => {
-  console.log(element); // 👉️ one, two, three, four
+colorMonica.forEach((element) => {
   favoriteColor[0].push(element);
 });
 
 favoriteColor.push([]);
-colorWendy.forEach(element => {
-  console.log(element); // 👉️ one, two, three, four
+colorWendy.forEach((element) => {
   favoriteColor[1].push(element);
 });
 
@@ -52,6 +50,19 @@ favoriteRestaurantWendy.add("Katsu");
 favoriteRestaurantWendy.add("Geprek");
 favoriteRestaurantWendy.add("Pancake");
 favoriteRestaurantWendy.add("Eggy");
+
+// Variable of favoriteRestaurant
+const favoriteRestaurant = [];
+
+favoriteRestaurant.push([]);
+favoriteRestaurantMonica.forEach((element) => {
+  favoriteRestaurant[0].push(element);
+});
+
+favoriteRestaurant.push([]);
+favoriteRestaurantWendy.forEach((element) => {
+  favoriteRestaurant[1].push(element);
+});
 
 const firstUser = {
   name: "Monica",
@@ -81,7 +92,7 @@ const firstUser = {
       city: "Tangerang",
     },
   ],
-  favoriteRestaurant: favoriteRestaurantMonica,
+  favoriteRestaurant: favoriteRestaurant[0],
 };
 
 const secondUser = {
@@ -107,7 +118,7 @@ const secondUser = {
       city: "Tangerang",
     },
   ],
-  favoriteRestaurant: favoriteRestaurantWendy,
+  favoriteRestaurant: favoriteRestaurant[1],
 };
 
 // TODO: Masukkan hasil akhir dari kedua user di sini
@@ -118,7 +129,7 @@ users.push(secondUser);
 // ! JANGAN MODIFIKASI LINE DI BAWAH
 function main() {
   console.log(users.length || users.size);
-  console.log(users); 
+  console.log(users);
 }
 
 main();
