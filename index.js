@@ -1,9 +1,16 @@
 // TODO: Buatlah data dari kedua user di sini
 // Tentukan tipe data dan struktur data yang menurut kalian tepat
 // Kalian bisa membuat variabel lain untuk dimasukkan ke dalam atribut user agar lebih mudah dibaca
-const color = new Map();
-color.set("Monica", ["Yellow", "Pink", "White", "Purple"]);
-color.set("Wendy", ["Blue", "Black", "Grey"]);
+const colorMonica = new Set();
+colorMonica.add("Yellow");
+colorMonica.add("Pink");
+colorMonica.add("White");
+colorMonica.add("Purple");
+
+const colorWendy = new Set();
+colorWendy.add("Blue");
+colorWendy.add("Black");
+colorWendy.add("Grey");
 
 const favoriteRestaurantMonica = new Set();
 favoriteRestaurantMonica.add("Bento");
@@ -11,6 +18,12 @@ favoriteRestaurantMonica.add("Sushi");
 favoriteRestaurantMonica.add("Pancake");
 favoriteRestaurantMonica.add("Eggy");
 favoriteRestaurantMonica.add("Tempura");
+favoriteRestaurantMonica.add("Bento");
+favoriteRestaurantMonica.add("Eggy");
+favoriteRestaurantMonica.add("Padang");
+favoriteRestaurantMonica.add("Tteok");
+favoriteRestaurantMonica.add("Sushi");
+favoriteRestaurantMonica.add("Sushi");
 
 const favoriteRestaurantWendy = new Set();
 favoriteRestaurantWendy.add("Tempura");
@@ -28,7 +41,7 @@ const firstUser = {
   gender: "Female",
   age: 17,
   email: "monica@dingdong.com",
-  favoriteColor: () => color.get(this.name),
+  favoriteColor: colorMonica,
   isHavePet: false,
   education: [
     {
@@ -59,7 +72,7 @@ const secondUser = {
   gender: "Male",
   age: 23,
   email: "wendy@dingdong.com",
-  favoriteColor: () => color.get(this.name),
+  favoriteColor: colorWendy,
   isHavePet: true,
   education: [
     {
