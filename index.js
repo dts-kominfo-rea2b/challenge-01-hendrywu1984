@@ -5,25 +5,23 @@ const color = new Map();
 color.set("Monica", ["Yellow", "Pink", "White", "Purple"]);
 color.set("Wendy", ["Blue", "Black", "Grey"]);
 
-const favoriteRestaurant = new Map();
-favoriteRestaurant.set("Monica", [
-  "Bento",
-  "Sushi",
-  "Pancake",
-  "Eggy",
-  "Tempura",
-]);
-favoriteRestaurant.set("Wendy", [
-  "Tempura",
-  "Bento",
-  "Sushi",
-  "Pancake",
-  "Padang",
-  "Katsu",
-  "Geprek",
-  "Pancake",
-  "Eggy",
-]);
+const favoriteRestaurantMonica = new Set();
+favoriteRestaurantMonica.add("Bento");
+favoriteRestaurantMonica.add("Sushi");
+favoriteRestaurantMonica.add("Pancake");
+favoriteRestaurantMonica.add("Eggy");
+favoriteRestaurantMonica.add("Tempura");
+
+const favoriteRestaurantWendy = new Set();
+favoriteRestaurantWendy.add("Tempura");
+favoriteRestaurantWendy.add("Bento");
+favoriteRestaurantWendy.add("Sushi");
+favoriteRestaurantWendy.add("Pancake");
+favoriteRestaurantWendy.add("Padang");
+favoriteRestaurantWendy.add("Katsu");
+favoriteRestaurantWendy.add("Geprek");
+favoriteRestaurantWendy.add("Pancake");
+favoriteRestaurantWendy.add("Eggy");
 
 const firstUser = {
   name: "Monica",
@@ -53,7 +51,7 @@ const firstUser = {
       city: "Tangerang",
     },
   ],
-  favoriteRestaurant: () => color.get(this.favoriteRestaurant),
+  favoriteRestaurant: favoriteRestaurantMonica,
 };
 
 const secondUser = {
@@ -79,7 +77,7 @@ const secondUser = {
       city: "Tangerang",
     },
   ],
-  favoriteRestaurant: () => color.get(this.favoriteRestaurant),
+  favoriteRestaurant: favoriteRestaurantWendy,
 };
 
 // TODO: Masukkan hasil akhir dari kedua user di sini
